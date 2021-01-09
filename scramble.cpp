@@ -7,12 +7,14 @@ bool isValidWord(string str);
 bool isVowel(char c);
 
 int main(int argc, char** argv) {
+  string word;
   if (argc < 2) {
     cout << "Please enter a valid string" << endl;
-    return 0;
+    word = "TODO"; // Placeholder for the word to be unscrambled.
+  } else {
+    word = argv[1];
   }
 
- string word = argv[1];
  string before = "";
  generatePermutations(before, word);
  return 0;
